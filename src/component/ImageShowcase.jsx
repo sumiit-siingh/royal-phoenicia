@@ -41,7 +41,7 @@ export default function CurtainSlider() {
   }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-black">
+    <div className="relative w-screen min-h-screen overflow-hidden bg-black">
 
       {/* 🌆 Background window image */}
       <motion.img
@@ -50,6 +50,13 @@ export default function CurtainSlider() {
         transition={{ duration: 4, ease: 'easeInOut' }}
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
+
+      {/* 🏨 Title on top */}
+      <div className="absolute inset-0 z-50 flex items-center justify-center px-4">
+        <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-bold text-center">
+          Hotel Royal Phoenicia
+        </h1>
+      </div>
 
       {/* 🎭 Curtain Image */}
       <AnimatePresence>
@@ -64,7 +71,7 @@ export default function CurtainSlider() {
               scale: { duration: 4, ease: 'easeInOut', delay: 2 },
               opacity: { duration: 1, ease: 'easeInOut' },
             }}
-            className="absolute inset-0 w-full h-full "
+            className="absolute inset-0 w-full h-full z-10"
           >
             <img
               src={images[index]}
@@ -75,5 +82,6 @@ export default function CurtainSlider() {
         )}
       </AnimatePresence>
     </div>
+
   );
 }
