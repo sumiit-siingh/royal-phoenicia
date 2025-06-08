@@ -1,71 +1,75 @@
 import React from "react";
-// import { FaCrown } from "react-icons/fa";
 import { IoStarOutline } from "react-icons/io5";
 import { PiCrownLight } from "react-icons/pi";
-
 import { MdOutlineShoppingBag } from "react-icons/md";
-
-
 import { BsMenuButton } from "react-icons/bs";
 
-
 export default function Navbar() {
-    const menuItems = ["ROOMS", "WELLNESS", "GASTRO", "HOTEL", "EVENTS", "CONTACT"]
+    const menuItems = ["ROOMS", "WELLNESS", "GASTRO", "HOTEL", "EVENTS", "CONTACT"];
+
     return (
-        <div className="fixed top-0 z-10 w-full backdrop-blur-2xl bg-white/10 border-b border-white/20">
-            {/* Top Nav */}
-            <div className="flex items-center justify-between w-full px-4 py-3 md:px-6 text-black">
-                {/* Left: Menu Button */}
-                <div className="flex items-center gap-2 p-2 md:p-4 bg-gray-700 rounded-full text-white">
-                    <BsMenuButton />
-                    <div>Menu</div>
+        <div className="fixed top-0 z-10 w-full backdrop-blur-2xl  border-b border-gray-300 ">
+
+            {/* Top Navbar */}
+            <div className="flex items-center justify-between  w-full py-2 sm:px-6 text-gray-300 border-b border-gray-300">
+
+                {/* Left: Menu */}
+                <div className="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full text-sm sm:text-base">
+                    <BsMenuButton className="text-lg sm:text-xl" />
+                    <span>Menu</span>
                 </div>
 
-                {/* Center Content */}
-                <div className="flex items-center justify-center gap-4 sm:gap-6 text-white text-sm md:text-base">
-                    <div className="tracking-[0.5em] font-poppins-regular">2&nbsp;0&nbsp;2&nbsp;2</div>
+                {/* Center */}
+                <div className="flex items-center justify-center gap-4 sm:gap-6">
 
-                    {/* Crown Icon and Text */}
-                    <div className="p-2 sm:p-3 rounded-full border-2 border-white flex flex-col items-center justify-center">
-                        <div className="text-xl mb-[-4px]">
-                            <PiCrownLight />
-                        </div>
-                        <div className="relative w-[45px] h-[30px] -mb-4">
+                    {/* Year */}
+                    <div className="tracking-widest text-xs sm:text-sm font-poppins-regular">
+                        2&nbsp;0&nbsp;2&nbsp;2
+                    </div>
+
+                    {/* Crown & Title */}
+                    <div className="flex flex-col items-center justify-center px-3 py-2 sm:px-4 sm:py-3 rounded-full border-2 border-white text-xs sm:text-sm">
+
+                        <PiCrownLight className="text-lg text-white sm:text-2xl mb-[-2px]" />
+
+                        {/* Responsive Rounded Arcs */}
+                        <div className="relative w-10 sm:w-12 h-6 sm:h-7 -mb-4">
                             <div className="absolute inset-0 border-t-2 border-white rounded-t-full" />
-                            <div className="absolute top-1 left-2 right-2 h-[24px] border-t-2 border-white rounded-t-full" />
-                            <div className="absolute top-2 left-4 right-4 h-[18px] border-t-2 border-white rounded-t-full" />
+                            <div className="absolute top-[4px] left-[10%] right-[10%] h-[70%] border-t-2 border-white rounded-t-full" />
+                            <div className="absolute top-[8px] left-[20%] right-[20%] h-[50%] border-t-2 border-white rounded-t-full" />
                         </div>
-                        <div className="text-center leading-tight -mt-1">
-                            <span className="font-charmonman-regular text-2xl font-bold tracking-wide">
+
+                        {/* Royal Text */}
+                        <div className="-mt-1 text-center leading-tight">
+                            <span className="font-charmonman-regular text-lg sm:text-2xl font-bold tracking-wide text-white">
                                 R
-                                <span className="font-gideon-roman-regular text-[14px] font-normal">OYAL</span>
+                                <span className="font-gideon-roman-regular text-[10px] sm:text-sm font-normal text-white">OYAL</span>
                             </span>
                         </div>
                     </div>
 
                     {/* Stars */}
-                    <div className="flex gap-1 text-white">
-                        <IoStarOutline />
-                        <IoStarOutline />
-                        <IoStarOutline />
-                        <IoStarOutline />
+                    <div className="flex gap-1 text-gray-300 text-sm sm:text-base">
+                        {Array(4).fill().map((_, i) => (
+                            <IoStarOutline key={i} />
+                        ))}
                     </div>
                 </div>
 
-                {/* Right: Booking Button */}
-                <div className="flex items-center gap-2 p-2 md:p-4 bg-gray-700 rounded-full text-white">
-                    <div>Booking</div>
-                    <MdOutlineShoppingBag />
+                {/* Right: Booking */}
+                <div className="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full text-sm sm:text-base">
+                    <span>Booking</span>
+                    <MdOutlineShoppingBag className="text-lg sm:text-xl" />
                 </div>
             </div>
 
-            {/* Menu Items Nav - Always in row, scrollable on small screens */}
-            <div className="w-full overflow-x-auto bg-white/10 backdrop-blur-2xl border-b border-white/20">
-                <div className="flex flex-row items-center gap-8 sm:gap-6 px-4 py-3 whitespace-nowrap text-white text-sm sm:text-base min-w-max">
+            {/* Menu Items */}
+            <div className="w-full overflow-x-auto z-10  bg-white/10 backdrop-blur-2xl ">
+                <div className="flex  items-center justify-center gap-4 sm:gap-10 px-4 py-3 whitespace-nowrap text-white text-xs sm:text-sm md:text-base min-w-max">
                     {menuItems.map((item, index) => (
                         <div
                             key={index}
-                            className="hover:text-yellow-300 cursor-pointer transition"
+                            className="hover:text-yellow-300 cursor-pointer transition-all duration-200 font-poppins-regular"
                         >
                             {item}
                         </div>
@@ -73,7 +77,5 @@ export default function Navbar() {
                 </div>
             </div>
         </div>
-
-
-    )
+    );
 }
