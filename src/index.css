@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+@import "tailwindcss";
+
+
+
+@tailwind utilities;
+
+/* Custom Spotlight Animation */
+@layer utilities {
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -40%) scale(1);
+    }
+  }
+
+  .animate-spotlight {
+    animation: spotlight 2s ease 0.75s 1 forwards;
+  }
+}
+
+
+@layer base{
+  *,
+  *::before,
+  *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  *{
+    scrollbar-width: none;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}.text-outline {
+  text-shadow: 2px 2px 4px rgb(0, 0, 0), -2px -2px 4px rgba(0, 0, 0, 0.993);
+}
+
+@theme{
+  --font-limelight-regular:Limelight,"sans-serif"
+}
+@theme{
+  --font-neonderthaw-regular:Neonderthaw, "cursive";
+}
+@theme{
+  --font-beau-rivage-regular:Beau Rivage, "cursive";
+}
+@theme{
+  --font-titan-one-regular:Titan One, "sans-serif";
+}
+@theme{
+  --font-rationale-regular:"Rationale", sans-serif;
+}
+@theme{
+  --font-bungee-outline-regular:"Bungee Outline", sans-serif;
+}
+@theme{
+  --font-poppins-thin:"Poppins", sans-serif;
+}
+@theme{
+  --font-poppins-regular:"Poppins", sans-serif;
+}
+@theme{
+  --font-charmonman-regular:"Charmonman", sans-serif;
+}
+@theme{
+    --font-gideon-roman-regular:"Gideon Roman", serif;
+}
