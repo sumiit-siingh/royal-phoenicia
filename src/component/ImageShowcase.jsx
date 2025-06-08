@@ -71,7 +71,7 @@ export default function CurtainSlider() {
               scale: { duration: 4, ease: 'easeInOut', delay: 2 },
               opacity: { duration: 1, ease: 'easeInOut' },
             }}
-            className="absolute inset-0 w-full h-full z-10"
+            className="absolute inset-0 w-full h-full z-0"
           >
             <img
               src={images[index]}
