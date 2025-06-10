@@ -45,15 +45,15 @@ export default function AlternatingImageSlider() {
             ))}
 
             {/* Centered Card Overlay */}
-            <div className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2  backdrop-blur-sm p-6  shadow-xl text-center ">
-                <div className='border p-5 bg-white/70 '>
-                    <div className='border p-20 pt-10 pb-10 space-y-5'>
-                        <p className="text-gray-700  font-gideon-roman-regular text-lg ">Favourite Hotel</p>
-                        <p className="text-gray-700  font-gideon-roman-regular text-lg ">
+            <div className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 border border-gray-500 p-6  shadow-xl text-center ">
+                <div className='border border-gray-600 p-5 bg-white '>
+                    <div className='border border-gray-600 p-20 md:pt-10 pt-5 h-100  md:space-y-10 space-y-5'>
+                        <p className="text-gray-700   font-gideon-roman-regular md:text-lg text-sm ">Favourite Hotel</p>
+                        <p className="text-gray-700  font-gideon-roman-regular md:text-lg text-sm ">
                             Business and Event Spaces </p>
-                        <p className="text-gray-700  font-gideon-roman-regular text-lg ">Diverse Dining Options</p>
-                        <p className="text-gray-700  font-gideon-roman-regular text-lg ">Multiple Swimming Pools</p>
-                        <p className="text-gray-700  font-gideon-roman-regular text-lg ">Family-Friendly Amenities</p>
+                        <p className="text-gray-700  font-gideon-roman-regular md:text-lg text-sm">Diverse Dining Options</p>
+                        <p className="text-gray-700  font-gideon-roman-regular md:text-lg text-sm">Multiple Swimming Pools</p>
+                        <p className="text-gray-700  font-gideon-roman-regular md:text-lg text-sm">Family-Friendly Amenities</p>
                     </div>
                 </div>
 

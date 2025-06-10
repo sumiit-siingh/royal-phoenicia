@@ -2,17 +2,22 @@ import React from "react";
 import ImageShowcase from "../component/ImageShowcase";
 import WellnessMessage from "../component/WellnessMessage";
 import AlternatingImageSlider from "../component/InteriorImageSlider";
+import FacilityShowcase from "../component/IIFacilityShowcase";
 
 export default function HomePage() {
     return (
-        <div className="h-full w-full">
+        <div className=" relative h-full w-full">
             <div className=" ">
                 <ImageShowcase />
             </div>
             <div>
                 <WellnessMessage />
             </div>
-            <div><AlternatingImageSlider />
+            <div>
+                <AlternatingImageSlider />
+            </div>
+            <div >
+                <FacilityShowcase/>
             </div>
         </div>
     )

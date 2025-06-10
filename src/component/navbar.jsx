@@ -8,7 +8,7 @@ export default function Navbar() {
     const menuItems = ["ROOMS", "WELLNESS", "GASTRO", "HOTEL", "EVENTS", "CONTACT"];
 
     return (
-        <div className="fixed top-0 z-999 w-full backdrop-blur-2xl  border-b border-gray-300 ">
+        <div className="absolute top-0 z-999 w-full backdrop-blur-2xl  border-b border-gray-300 ">
 
             {/* Top Navbar */}
             <div className="flex items-center justify-between  w-full py-2 sm:px-6 text-gray-300 border-b border-gray-300">

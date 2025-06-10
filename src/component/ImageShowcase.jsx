@@ -104,7 +104,7 @@ export default function CurtainSlider() {
             transition={{ delay: 3, duration: 3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <span className="block font-gideon-roman-regular text-4xl sm:text-8xl tracking-widest ">Royal Phoenicia</span>
+            <span className="block md:min-w-[60vw] font-gideon-roman-regular text-4xl sm:text-8xl tracking-widest ">Royal Phoenicia</span>
           </motion.div>
           <motion.div
             initial={{ width: 0 }}

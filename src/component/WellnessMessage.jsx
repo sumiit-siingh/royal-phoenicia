@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { IoIosArrowForward } from "react-icons/io";
+
 
 export default function WellnessMessage() {
     const ref = useRef(null);
@@ -50,7 +52,15 @@ export default function WellnessMessage() {
             </motion.div>
 
             {/* Bottom "Hotel" pill */}
-            <div className="rounded-full h-15 w-32 border text-center p-4">Hotel</div>
+            <div className=" relative group flex items-center justify-center  h-20 w-40 cursor-pointer">
+                <div className=" absolute opacity-0 group-hover:bg-sky-800 text-white text-5xl shadow  group-hover:opacity-100 group-hover:border p-10 rounded-full transition-all duration-1000 ">
+                    <div className="relative flex items-center justify-center h-10 w-10 ">
+                        <IoIosArrowForward className="absolute opacity-70" />
+                        <IoIosArrowForward className="translate-x-1 absolute" />
+                    </div>
+                </div>
+                <div className=" absolute group-hover:opacity-0  rounded-full h-15 w-32  border text-center p-4  duration-1000">Hotel</div>
+            </div>
         </div>
 
     );
