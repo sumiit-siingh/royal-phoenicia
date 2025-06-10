@@ -25,14 +25,21 @@ export default function FacilityShowcase() {
     return (
         <div className="w-full h-fit relative pt-40 bg-amber-50">
             {/* "II" Text */}
-            <div className="flex w-full items-center justify-center absolute">
-                <div className="flex p-2 border">
-                    <div className="p-2 border font-gideon-roman-regular text-2xl text-gray-600">
+            <div className="flex  w-full items-center h-24 justify-center absolute">
+                <div className="flex items-center justify-center border border-gray-400 h-22 pl-3 pr-3 p-2 ">
+                    <div className="p-2 border-2 flex items-center justify-center h-16 font-gideon-roman-regular text-3xl text-gray-500">
                         II
                     </div>
                 </div>
             </div>
-
+            {/* 
+            <div className="w-full">
+                <div className="border border-gray-400 h-24 w-20 flex items-center justify-center">
+                    <div className="border-2 border-gray-400 h-18 w-12 flex items-center justify-center">
+                        <div className="text-3xl font-libre-bodoni-regular text-gray-500">II</div>
+                    </div>
+                </div>
+            </div> */}
             {/* Desktop View */}
             <div className="hidden md:flex justify-center items-center h-screen">
                 {data.map((item, index) => (
@@ -70,15 +77,15 @@ export default function FacilityShowcase() {
                             src={item.image}
                             alt={item.label}
                             className={`absolute inset-0 w-full h-full object-cover transition-all duration-[2200ms] ease-in-out p-2 ${activeIndex === index
-                                    ? "opacity-100 scale-110"
-                                    : "opacity-0 scale-100"
+                                ? "opacity-100 scale-110"
+                                : "opacity-0 scale-100"
                                 }`}
                         />
                         <div className="absolute inset-0 flex items-center justify-center z-10">
                             <div
                                 className={`tracking-widest font-gideon-roman-regular font-semibold px-4 py-2 rounded text-4xl transition-all duration-500 ${activeIndex === index
-                                        ? "text-white scale-110"
-                                        : "text-sky-800"
+                                    ? "text-white scale-110"
+                                    : "text-sky-800"
                                     }`}
                             >
                                 {item.label}
@@ -87,7 +94,7 @@ export default function FacilityShowcase() {
                     </div>
                 ))}
             </div>
-            <div className=" relative w-full group flex items-center justify-center  cursor-pointer">
+            <div className=" relative w-full group flex items-center justify-center md:h-0 h-20 cursor-pointer">
                 <div className=" absolute opacity-0 group-hover:bg-sky-800 text-white text-5xl shadow  group-hover:opacity-100 group-hover:border p-10 rounded-full transition-all duration-1000 ">
                     <div className="relative flex items-center justify-center h-10 w-10 ">
                         <IoIosArrowForward className="absolute opacity-70" />
