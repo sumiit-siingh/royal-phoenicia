@@ -14,8 +14,8 @@ export default function Navbar() {
             <div className="flex items-center justify-between  w-full py-2 sm:px-6 text-gray-300 border-b border-gray-300">
 
                 {/* Left: Menu */}
-                <div className="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full text-sm sm:text-base">
-                    <BsMenuButton className="text-lg sm:text-xl" />
+                <div className="flex items-center gap-2 px-2 md:px-4 py-2 bg-gray-700 rounded-full text-xs sm:text-base">
+                    <BsMenuButton className="text-sm sm:text-xl" />
                     <span>Menu</span>
                 </div>
 
@@ -49,7 +49,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Stars */}
-                    <div className="flex gap-1 text-gray-300 text-sm sm:text-base">
+                    <div className="flex  gap-2 text-gray-300 text-xs sm:text-base">
                         {Array(4).fill().map((_, i) => (
                             <IoStarOutline key={i} />
                         ))}
@@ -57,9 +57,9 @@ export default function Navbar() {
                 </div>
 
                 {/* Right: Booking */}
-                <div className="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-full text-sm sm:text-base">
+                <div className="flex items-center gap-2 px-2 md:px-4 py-2 bg-gray-700 rounded-full text-xs sm:text-base">
                     <span>Booking</span>
-                    <MdOutlineShoppingBag className="text-lg sm:text-xl" />
+                    <MdOutlineShoppingBag className="text-sm sm:text-xl" />
                 </div>
             </div>
 
