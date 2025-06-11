@@ -23,12 +23,12 @@ export default function Navbar() {
                 <div className="flex items-center justify-center gap-4 sm:gap-6">
 
                     {/* Year */}
-                    <div className="tracking-widest text-xs sm:text-sm font-poppins-regular">
+                    <div className="tracking-widest translate-x-2 md:translate-x-0 text-xs sm:text-sm font-poppins-regular">
                         2&nbsp;0&nbsp;2&nbsp;2
                     </div>
 
                     {/* Crown & Title */}
-                    <div className="flex flex-col items-center justify-center px-3 py-2 sm:px-4 sm:py-3 rounded-full border-2 border-white text-xs sm:text-sm">
+                    <div className="flex flex-col items-center justify-center px-3 md:translate-x-0 translate-x-2 py-2 sm:px-4 sm:py-3 rounded-full border-2 border-white text-xs sm:text-sm">
 
                         <PiCrownLight className="text-lg text-white sm:text-2xl mb-[-2px]" />
 
@@ -49,7 +49,7 @@ export default function Navbar() {
                     </div>
 
                     {/* Stars */}
-                    <div className="flex  gap-2 text-gray-300 text-xs sm:text-base">
+                    <div className="flex  gap-1 md:gap-2   text-gray-300 text-xs sm:text-base">
                         {Array(4).fill().map((_, i) => (
                             <IoStarOutline key={i} />
                         ))}

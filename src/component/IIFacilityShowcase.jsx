@@ -95,13 +95,13 @@ export default function FacilityShowcase() {
                 ))}
             </div>
             <div className=" relative w-full group flex items-center justify-center md:h-0 h-20 cursor-pointer">
-                <div className=" absolute opacity-0 group-hover:bg-sky-800 text-white text-5xl shadow  group-hover:opacity-100 group-hover:border p-10 rounded-full transition-all duration-1000 ">
+                <div className=" absolute opacity-0 md:-translate-y-20 group-hover:bg-sky-800 text-white text-5xl shadow  group-hover:opacity-100 group-hover:border p-10 rounded-full transition-all duration-1000 ">
                     <div className="relative flex items-center justify-center h-10 w-10 ">
                         <IoIosArrowForward className="absolute opacity-70" />
                         <IoIosArrowForward className="translate-x-1 absolute" />
                     </div>
                 </div>
-                <div className=" absolute group-hover:opacity-0  rounded-full h-15 w-32  border text-center p-4  duration-1000">Accomodation</div>
+                <div className=" absolute group-hover:opacity-0 md:-translate-y-20 -translate-y-2 rounded-full h-15 w-42  border text-center p-4  duration-1000">Accomodation</div>
             </div>
         </div>
     );

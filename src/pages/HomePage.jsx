@@ -3,6 +3,7 @@ import ImageShowcase from "../component/ImageShowcase";
 import WellnessMessage from "../component/WellnessMessage";
 import AlternatingImageSlider from "../component/InteriorImageSlider";
 import FacilityShowcase from "../component/IIFacilityShowcase";
+import PackageShowcase from "../component/packageShowcase";
 
 export default function HomePage() {
     return (
@@ -18,6 +19,9 @@ export default function HomePage() {
             </div>
             <div >
                 <FacilityShowcase/>
+            </div>
+            <div>
+                <PackageShowcase/>
             </div>
         </div>
     )
