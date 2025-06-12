@@ -27,7 +27,7 @@ export default function PackageShowcase() {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="bg-orange-50 w-full h-screen py-12">
+        <div className="bg-orange-50 w-full h-screen border-b py-5">
             <div className="overflow-x-auto ">
                 <div className="items-center justify-center flex p-10 w-full">
                     <div className="md:text-6xl text-3xl tracking-widest font-semibold font-gideon-roman-regular flex items-center  p-10 justify-center">

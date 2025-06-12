@@ -4,6 +4,9 @@ import WellnessMessage from "../component/WellnessMessage";
 import AlternatingImageSlider from "../component/InteriorImageSlider";
 import FacilityShowcase from "../component/IIFacilityShowcase";
 import PackageShowcase from "../component/packageShowcase";
+import Facilities from "../component/facilitiesComponent";
+import AboutUs from "../component/AboutUsComponent";
+
 
 export default function HomePage() {
     return (
@@ -18,10 +21,16 @@ export default function HomePage() {
                 <AlternatingImageSlider />
             </div>
             <div >
-                <FacilityShowcase/>
+                <FacilityShowcase />
             </div>
             <div>
-                <PackageShowcase/>
+                <PackageShowcase />
+            </div>
+            <div>
+                <Facilities />
+            </div>
+            <div>
+                <AboutUs />
             </div>
         </div>
     )
