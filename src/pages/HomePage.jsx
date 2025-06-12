@@ -6,8 +6,9 @@ import FacilityShowcase from "../component/IIFacilityShowcase";
 import PackageShowcase from "../component/packageShowcase";
 import Facilities from "../component/facilitiesComponent";
 import AboutUs from "../component/AboutUsComponent";
-
-
+import FacilityCards from "../component/threeFacilitycards";
+import HotelInfoLayout from "../component/bottomComponent";
+import EventShowcase from "../component/eventShowcase";
 export default function HomePage() {
     return (
         <div className=" relative h-full w-full">
@@ -31,6 +32,15 @@ export default function HomePage() {
             </div>
             <div>
                 <AboutUs />
+            </div>
+            <div>
+                <FacilityCards />
+            </div>
+            <div>
+                <EventShowcase />
+            </div>
+            <div>
+                <HotelInfoLayout />
             </div>
         </div>
     )
