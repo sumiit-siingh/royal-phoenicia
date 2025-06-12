@@ -33,7 +33,7 @@ export default function Facilities() {
           </div>
         </div>
       </div>
-      <div className=" flex h-[90%] mt-30 ">
+      <div className=" flex md:h-[90%] h-[50%] mt-30 ">
         {facilities.map((facility, index) => {
           const isHovered = hoveredIndex === index;
 
@@ -58,14 +58,14 @@ export default function Facilities() {
               />
               <div className="absolute inset-0 z-10 bg-black/40 flex flex-col items-center justify-center font-libre-bodoni-regular">
                 <motion.h2
-                  className="text-white text-2xl tracking-wider max-w-65 md:text-4xl font-bold text-center"
+                  className="text-white text-md tracking-wider md:max-w-65 max-w-28 md:text-4xl font-bold text-center"
                   animate={{ scale: isHovered ? 1.2 : 1 }}
                   transition={{ duration: 2 }}
                 >
                   {facility.title}
                 </motion.h2>
                 <motion.p
-                  className="text-white text-sm text-center mt-3 font-poppins-regular max-w-xs"
+                  className="text-white md:text-sm text-[8px] m text-center mt-3 font-poppins-regular max-w-30 md:max-w-xs"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: isHovered ? 1 : 0 }}
                   transition={{ duration: 1 }}
