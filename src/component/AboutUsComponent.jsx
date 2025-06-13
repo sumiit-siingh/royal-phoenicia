@@ -25,7 +25,7 @@ export default function AboutUs() {
       {/* Reveal Title Animation */}
       <div
         ref={textRef}
-        className="flex w-full  bg-red-400 items-center justify-center overflow-hidden"
+        className="flex w-full  items-center justify-center overflow-hidden"
       >
         <motion.div
           className="font-libre-bodoni-regular tracking-widest md:text-7xl text-xl text-center whitespace-nowrap"
@@ -51,7 +51,7 @@ export default function AboutUs() {
 
         {/* About Text */}
         <div className="md:space-y-10">
-          <div className="md:text-3xl tracking-wider font-gideon-roman-regular text-md font-semibold md:p-0 p-5">
+          <div className="md:text-3xl tracking-wider font-gideon-roman-regular text-md md:mt-5 font-semibold md:p-0 p-5">
             About us
           </div>
           <div className="max-w-100 text-gray-600 max-h-150 font-poppins-regular md:text-sm text-xs p-5 md:p-0">

@@ -12,7 +12,7 @@ import EventShowcase from "../component/eventShowcase";
 export default function HomePage() {
     return (
         <div className=" relative h-full w-full">
-            <div className=" ">
+            <div >
                 <ImageShowcase />
             </div>
             <div>

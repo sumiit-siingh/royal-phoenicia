@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { IoIosArrowForward } from "react-icons/io";
 
 const texts = [
   {
@@ -22,7 +23,7 @@ const texts = [
 export default function EventScroller() {
   return (
     <div
-      className="relative h-screen overflow-y-scroll snap-y snap-mandatory"
+      className="relative h-screen w-full overflow-y-scroll snap-y snap-mandatory"
       style={{
         backgroundImage: `url('https://res.cloudinary.com/dq829orud/image/upload/v1749749317/img_pool1_zo390u.webp')`,
         backgroundSize: "cover",
@@ -46,31 +47,37 @@ export default function EventScroller() {
           </div>
 
           {/* Foreground Scrollable Card */}
-          {/* <div className="relative z-20 flex items-center justify-center h-full">
-            <div className="bg-white bg-opacity-90 p-10 rounded-lg shadow-lg max-w-xl text-center border">
-              <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-4">
-                {text.title}
-              </h2>
-              <p className="text-gray-600 mb-6">{text.desc}</p>
-              <button className="px-6 py-2 border border-gray-500 rounded-full hover:bg-gray-100 transition">
-                MORE
-              </button>
-            </div>
-          </div> */}
-          <div className="absolute w-[35%] top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 border border-gray-500 p-6  shadow-xl text-center ">
-            <div className='border border-gray-600 p-5 bg-white '>
-              <div className='border border-gray-600 p-20 md:pt-10 pt-5 h-100  md:space-y-10 space-y-5'>
-                <h2 className="text-3xl md:text-4xl inline w-250 font-serif font-semibold mb-4">
+
+          <div className="absolute flex flex-col items-center justify-center md:h-100   md:w-[450px] w-[340px] h-[350px]  top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 border border-gray-500 shadow-xl text-center ">
+            {/* Inner Container */}
+            <div className="border border-gray-600 p-4 md:h-[320px]  md:p-5 bg-white w-[300px] md:w-[400px]">
+              <div className="border border-gray-600 flex h-70 flex-col items-center justify-center md:pt-0  md:space-y-10">
+                <h2 className="text-lg md:text-2xl md:-translate-y-5 -translate-y-15 font-serif font-semibold">
                   {text.title}
                 </h2>
-                <p className="text-gray-600 mb-6">{text.desc}</p>
-                <button className="px-6 py-2 border border-gray-500 rounded-full hover:bg-gray-100 transition">
-                  MORE
-                </button>
+                <p className="text-gray-600 md:-translate-y-10 -translate-y-8 text-xs md:text-sm px-2 md:px-6 max-w-xs md:max-w-[300px]">
+                  {text.desc}
+                </p>
               </div>
             </div>
 
+            {/* Button / Arrow Section */}
+            <div className="absolute bottom-15 md:top-90 group flex items-center justify-center mt-6 cursor-pointer">
+              {/* Hover Circle Arrow */}
+              <div className="opacity-0 md:-translate-y-20 group-hover:opacity-100 group-hover:bg-sky-800 text-white text-3xl md:text-5xl shadow group-hover:border p-4 md:p-7 rounded-full transition-all duration-700 ease-in-out">
+                <div className="relative flex items-center justify-center w-10 h-10">
+                  <IoIosArrowForward className="absolute opacity-70" />
+                  <IoIosArrowForward className="absolute translate-x-1" />
+                </div>
+              </div>
+
+              {/* Default "more" button */}
+              <div className="absolute  group-hover:opacity-0 -translate-y-0 md:-translate-y-20 rounded-full h-10 w-24 border flex items-center justify-center text-sm md:text-base transition-all duration-700 ease-in-out">
+                <span>more</span>
+              </div>
+            </div>
           </div>
+
         </section>
       ))}
     </div>

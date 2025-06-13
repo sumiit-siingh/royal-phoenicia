@@ -36,7 +36,7 @@ const facilities = [
 export default function FacilityCards() {
   return (
     <div className="w-full mt-20 py-16 border-t bg-white flex items-center justify-center">
-      <div className="flex flex-row flex-wrap justify-between gap-8 px-4 w-full max-w-7xl">
+      <div className="flex  flex-wrap justify-between gap-8 md:px-0 px-15 w-full max-w-7xl">
         {facilities.map((facility, index) => (
           <div
             key={index}
